@@ -34,11 +34,22 @@ public class IntList {
 		return rest.get(i - 1);
 	}
 
+	public int iterativeGet(int i) {
+		IntList p = this;
+		int count = 0;
+		while (count != i) {
+			p = p.rest;
+			count += 1;
+		}
+		return p.first;
+	}
+
 	public static void main(String[] args) {
 		IntList L = new IntList(15, null);
 		L = new IntList(10, L);
 		L = new IntList(5, L);
 
-		System.out.println(L.get(100));
+		System.out.println(L.get(0));
+		System.out.println(L.iterativeGet(0));
 	}
 } 
