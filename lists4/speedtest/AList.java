@@ -32,11 +32,7 @@ public class AList {
     /** Inserts X into the back of the list. */
     public void addLast(int x) {
         if (size == items.length) {
-<<<<<<< HEAD
-            resize(size + 100);
-=======
             resize((int) (size * 1.1));
->>>>>>> c98b4750f0eb48c4da2edf0a5741612df195035d
         }
 
         items[size] = x;
